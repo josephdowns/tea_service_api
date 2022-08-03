@@ -1,29 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/josephdowns/turing/4module/projects/tea_service/app/controllers/api/v1/customers_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/josephdowns/turing/4module/projects/tea_service/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
       "/Users/josephdowns/turing/4module/projects/tea_service/app/models/customer.rb": {
         "lines": [
+          1,
           1,
           1,
           null,
@@ -39,43 +19,52 @@
           null
         ]
       },
-      "/Users/josephdowns/turing/4module/projects/tea_service/app/serializers/customer_serializer.rb": {
+      "/Users/josephdowns/turing/4module/projects/tea_service/app/models/subscription.rb": {
         "lines": [
           1,
           1,
+          1,
           null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/josephdowns/turing/4module/projects/tea_service/app/controllers/api/v1/customers_subscriptions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
           1,
           null,
           null,
           null,
+          1,
+          1,
           null,
+          null
+        ]
+      },
+      "/Users/josephdowns/turing/4module/projects/tea_service/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/josephdowns/turing/4module/projects/tea_service/app/models/customers_subscription.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           null,
           null,
           null
         ]
-      },
-      "/Users/josephdowns/turing/4module/projects/tea_service/app/models/subscription.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       },
       "/Users/josephdowns/turing/4module/projects/tea_service/app/models/tea.rb": {
         "lines": [
@@ -85,8 +74,52 @@
         ],
         "branches": {
         }
+      },
+      "/Users/josephdowns/turing/4module/projects/tea_service/app/serializers/customer_serializer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/josephdowns/turing/4module/projects/tea_service/app/controllers/api/v1/customers_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1659506293
+    "timestamp": 1659548367
   }
 }

@@ -4,6 +4,10 @@ class Api::V1::CustomersController < ApplicationController
     render json: CustomerSerializer.new(customer), status: 201
   end
 
+  def update
+    binding.pry
+  end
+
   def customer_params
     params.permit(:first_name, :last_name, :address, :email)
   end
