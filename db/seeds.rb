@@ -9,11 +9,11 @@ CustomersSubscription.destroy_all
 Customer.destroy_all
 Subscription.destroy_all
 
-edgar = Customer.create({first_name: "Edgar", last_name: "Figaro", email: "edgar@ffvi.com", address: "1234 Figaro", subscription: true}) 
-sabin = Customer.create({first_name: "Sabin", last_name: "Figaro", email: "sabin@ffvi.com", address: "1234 Figaro", subscription: true}) 
-celes = Customer.create({first_name: "Celes", last_name: "Chere", email: "celes@ffvi.com", address: "1234 Tzen", subscription: false}) 
-terra = Customer.create({first_name: "Terra", last_name: "Branford", email: "terra@ffvi.com", address: "1234 Narshe", subscription: true}) 
-gau = Customer.create({first_name: "Gau", last_name: "Lynx", email: "gau@ffvi.com", address: "1234 Mobliz", subscription: false})
+edgar = Customer.create({first_name: "Edgar", last_name: "Figaro", email: "edgar@ffvi.com", address: "1234 Figaro"}) 
+sabin = Customer.create({first_name: "Sabin", last_name: "Figaro", email: "sabin@ffvi.com", address: "1234 Figaro"}) 
+celes = Customer.create({first_name: "Celes", last_name: "Chere", email: "celes@ffvi.com", address: "1234 Tzen"}) 
+terra = Customer.create({first_name: "Terra", last_name: "Branford", email: "terra@ffvi.com", address: "1234 Narshe"}) 
+gau = Customer.create({first_name: "Gau", last_name: "Lynx", email: "gau@ffvi.com", address: "1234 Mobliz"})
 
 try_tea = Subscription.create({title: "Try Tea", price: 30, frequency: 30})
 more_tea = Subscription.create({title: "More Tea, Please", price: 50, frequency: 30})

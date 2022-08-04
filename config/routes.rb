@@ -4,7 +4,8 @@ Rails.application.routes.draw do
       resources :customers, only: [:create, :update, :show]
       resources :subscriptions, only: [:update]
 
-      post "/subscriptions", to: "customers_subscriptions#create"
+      post "/customers/:customer_id/subscriptions/:subscription_id/new", to: "customers_subscriptions#create"
+      patch "/customers/:customer_id/subscriptions/:subscription_id/edit", to: "customers_subscriptions#update"
     end
   end
 end
