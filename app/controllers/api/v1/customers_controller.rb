@@ -5,7 +5,11 @@ class Api::V1::CustomersController < ApplicationController
   end
 
   def update
-    binding.pry
+  end
+
+  def show
+    customer = Customer.find(params[:id])
+    render json: CustomerSerializer.show(customer)
   end
 
   def customer_params

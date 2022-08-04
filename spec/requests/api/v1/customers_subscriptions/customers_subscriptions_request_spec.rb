@@ -24,4 +24,12 @@ RSpec.describe "customers_subscriptions request", type: :request do
       expect(celes.subscription).to be(true)
     end
   end
+
+  context "customer can cancel a subscription" do
+    it "cancels the subscription" do
+      terra = Customer.create!({first_name: "Terra", last_name: "Branford", email: "terra@ffvi.com", address: "1234 Narshe", subscription: true}) 
+      CustomersSubscription.create!({customer_id: terra.id, subscription_id: @tea.id, status: 0 })
+      
+    end
+  end
 end

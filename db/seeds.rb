@@ -9,16 +9,25 @@ CustomersSubscription.destroy_all
 Customer.destroy_all
 Subscription.destroy_all
 
-Customer.create([
-  {first_name: "Edgar", last_name: "Figaro", email: "edgar@ffvi.com", address: "1234 Figaro", subscription: true}, 
-  {first_name: "Sabin", last_name: "Figaro", email: "sabin@ffvi.com", address: "1234 Figaro", subscription: true}, 
-  {first_name: "Celes", last_name: "Chere", email: "celes@ffvi.com", address: "1234 Tzen", subscription: false}, 
-  {first_name: "Terra", last_name: "Branford", email: "terra@ffvi.com", address: "1234 Narshe", subscription: true}, 
-  {first_name: "Gau", last_name: "Lynx", email: "gau@ffvi.com", address: "1234 Mobliz", subscription: false}, 
-])
+edgar = Customer.create({first_name: "Edgar", last_name: "Figaro", email: "edgar@ffvi.com", address: "1234 Figaro", subscription: true}) 
+sabin = Customer.create({first_name: "Sabin", last_name: "Figaro", email: "sabin@ffvi.com", address: "1234 Figaro", subscription: true}) 
+celes = Customer.create({first_name: "Celes", last_name: "Chere", email: "celes@ffvi.com", address: "1234 Tzen", subscription: false}) 
+terra = Customer.create({first_name: "Terra", last_name: "Branford", email: "terra@ffvi.com", address: "1234 Narshe", subscription: true}) 
+gau = Customer.create({first_name: "Gau", last_name: "Lynx", email: "gau@ffvi.com", address: "1234 Mobliz", subscription: false})
 
-Subscription.create([
-  {title: "Try Tea", price: 30, frequency: 30},
-  {title: "More Tea, Please", price: 50, frequency: 30},
-  {title: "Tea, Tea, TEA!!", price: 100, frequency: 30},
+try_tea = Subscription.create({title: "Try Tea", price: 30, frequency: 30})
+more_tea = Subscription.create({title: "More Tea, Please", price: 50, frequency: 30})
+tea_tea = Subscription.create({title: "Tea, Tea, TEA!!", price: 100, frequency: 30})
+
+
+CustomersSubscription.create!([
+  {customer_id: edgar.id , subscription_id: tea_tea.id , status: 0  },
+  {customer_id: edgar.id, subscription_id: more_tea.id, status: 1  },
+  {customer_id: sabin.id, subscription_id: more_tea.id, status: 0 },
+  {customer_id: celes.id, subscription_id: more_tea.id, status: 1  },
+  {customer_id: celes.id, subscription_id: try_tea.id, status: 1 },
+  {customer_id: terra.id, subscription_id: try_tea.id, status: 0 },
+  {customer_id: gau.id, subscription_id: tea_tea.id, status: 1 },
+  {customer_id: gau.id, subscription_id: more_tea.id, status: 1 },
+  {customer_id: gau.id, subscription_id: try_tea.id, status: 1 }
 ])
