@@ -26,7 +26,7 @@ RSpec.describe 'customers request', type: :request do
   end
 
   it "shows a customer and all subscriptions" do
-    gau = Customer.create!({first_name: "Gau", last_name: "Lynx", email: "gau@ffvi.com", address: "1234 Mobliz", subscription: false})
+    gau = Customer.create!({first_name: "Gau", last_name: "Lynx", email: "gau@ffvi.com", address: "1234 Mobliz"})
     tea3 = Subscription.create!({title: "Tea, Tea, TEA!!", price: 100, frequency: 30})
     tea = Subscription.create!({title: "Try Tea", price: 30, frequency: 30})
     cs1 = CustomersSubscription.create!({customer_id: gau.id, subscription_id: tea3.id, status: 1})

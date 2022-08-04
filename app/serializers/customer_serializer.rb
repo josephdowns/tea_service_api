@@ -8,8 +8,7 @@ class CustomerSerializer
           "first_name": customer.first_name,
           "last_name": customer.last_name,
           "email": customer.email,
-          "address": customer.address,
-          "subscription": customer.subscription
+          "address": customer.address
         }
       }
     }
@@ -24,8 +23,7 @@ class CustomerSerializer
           "first_name": customer.first_name,
           "last_name": customer.last_name,
           "email": customer.email,
-          "address": customer.address,
-          "subscription": customer.subscription
+          "address": customer.address
         },
         "subscriptions": {
           "active":
