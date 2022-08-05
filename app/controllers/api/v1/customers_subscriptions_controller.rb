@@ -11,6 +11,10 @@ class Api::V1::CustomersSubscriptionsController < ApplicationController
     render json: CustomersSubscriptionSerializer.cancel(cs)
   end
 
+  def index
+    cs = CustomersSubscription.where(customer_id: params[:customer_id])
+  end
+
   def customers_subscriptions_params
     params.permit(:customer_id, :subscription_id)
   end
