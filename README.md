@@ -6,58 +6,58 @@
 # Endpoints
 
 - <b>GET</b> Customer Show Page
+````ruby
+/api/v1/customers/:customer_id
+````
 ````json
-/api/v1/cusomter/:customer_id
-
 {
       "data": {
         "type": "customers",
-        "id": customer.id,
+        "id": "customer.id",
         "attributes": {
-          "first_name": customer.first_name,
-          "last_name": customer.last_name,
-          "email": customer.email,
-          "address": customer.address
+          "first_name": "customer.first_name",
+          "last_name": "customer.last_name",
+          "email": "customer.email",
+          "address": "customer.address"
         },
         "subscriptions": {
           "active":
-            customer.customers_subscriptions
-            .joins(:subscription)
-            .where(customers_subscriptions: { status: 0})
-            .pluck('title'),
+            "customers_subscriptions.title",
           "canceled":
-            customer.customers_subscriptions
-            .joins(:subscription)
-            .where(customers_subscriptions: { status: 1})
-            .pluck('title')
+            "customers_subscriptions.title"
         }
       }
     }
 ````
 - <b>POST</b> New Subscription
 - cs = customers_subscription
-````json
+````ruby
 /api/v1/customers/:cusomter_id/subscriptions/:subscription_id/new
+````
+````json
 
 {
       "message": "Successfully subscribed!",
       "data": {
-        "customer_id": cs.customer_id,
-        "subscription_id": cs.subscription_id,
-        "status": cs.status
+        "customer_id": "cs.customer_id",
+        "subscription_id": "cs.subscription_id",
+        "status": "cs.status"
       }
     }
 ````
 
 - <b>PATCH</b> Cancel a subscription
 - cs = customer_subscription
+````ruby
+/api/v1/customers/:cusomter_id/subscriptions/:subscription_id/edit
+````
 ````json
 {
     "message": "Successfully unsubscribed!",
     "data": {
-      "customer_id": cs.customer_id,
-      "subscription_id": cs.subscription_id,
-      "status": cs.status
+      "customer_id": "cs.customer_id",
+      "subscription_id": "cs.subscription_id",
+      "status": "cs.status"
     }
   }
 ````
