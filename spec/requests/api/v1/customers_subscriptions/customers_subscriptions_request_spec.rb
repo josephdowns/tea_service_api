@@ -28,11 +28,12 @@ RSpec.describe "customers_subscriptions request", type: :request do
       patch "/api/v1/customers/#{terra.id}/subscriptions/#{@tea.id}/edit"
 
       new_cs = CustomersSubscription.last
-      show = JSON.parse(response.body, symbolize_names: true)[:data]
+      show = JSON.parse(response.body, symbolize_names: true)
 
       expect(new_cs.status).to eq("canceled")
-      expect(show[:subscriptions][:active].count).to be(0)
-      expect(show[:subscriptions][:canceled].count).to be(1)
+      expect(show[:message]).to eq("Successfully unsubscribed!")
+      expect(show[:data][:status]).to eq("canceled")
+
       
     end
   end
