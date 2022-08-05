@@ -1,3 +1,5 @@
+![tea](./app/media/images/content-pixie-m-gqDRzbJLQ-unsplash.jpeg)
+
 # Tea Service
 
 ![ruby](https://img.shields.io/badge/Ruby-2.7.4-red)
