@@ -5,6 +5,10 @@
 ![ruby](https://img.shields.io/badge/Ruby-2.7.4-red)
 ![rails](https://img.shields.io/badge/Rails-5.2.8-g)
 
+# Schema
+
+![schema](./app/media/images/Screen%20Shot%202022-08-04%20at%2011.01.01.png)
+
 # Endpoints
 
 - <b>GET</b> Customer Show Page
