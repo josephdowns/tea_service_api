@@ -16,4 +16,9 @@ class Api::V1::CustomersController < ApplicationController
     params.permit(:first_name, :last_name, :address, :email)
   end
 
+  def index
+    customers = Customer.all
+    render json: CustomerSerializer.index(customers)
+  end
+
 end
